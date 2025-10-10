@@ -1926,6 +1926,9 @@ class HCI_Cmd_Remote_OOB_Data_Request_Negative_Reply(Packet):
 # 7.2 Link Policy commands, the OGF is defined as 0x02
 
 class HCI_Cmd_Hold_Mode(Packet):
+    """
+    7.2.1 Hold Mode command
+    """
     name = "HCI_Hold_Mode"
     fields_desc = [LEShortField("connection_handle", 0),
                    LEShortField("hold_mode_max_interval", 0x0002),
@@ -1973,21 +1976,33 @@ class HCI_Cmd_Read_Local_Name(Packet):
 
 
 class HCI_Cmd_Write_Connect_Accept_Timeout(Packet):
+    """
+    7.3.14 Write Connection Accept Timeout command
+    """
     name = "HCI_Write_Connection_Accept_Timeout"
     fields_desc = [LEShortField("timeout", 32000)]  # 32000 slots is 20000 msec
 
 
 class HCI_Cmd_Write_Extended_Inquiry_Response(Packet):
+    """
+    7.3.50 Write Inquiry Mode command
+    """
     name = "HCI_Write_Extended_Inquiry_Response"
     fields_desc = [ByteField("fec_required", 0),
                    HCI_Extended_Inquiry_Response]
 
 
 class HCI_Cmd_Read_LE_Host_Support(Packet):
+    """
+    7.3.78 Read LE Host Support command
+    """
     name = "HCI_Read_LE_Host_Support"
 
 
 class HCI_Cmd_Write_LE_Host_Support(Packet):
+    """
+    7.3.79 Write LE Host Support command
+    """
     name = "HCI_Write_LE_Host_Support"
     fields_desc = [ByteField("supported", 1),
                    ByteField("unused", 1), ]
@@ -2046,6 +2061,9 @@ class HCI_Cmd_Write_Loopback_Mode(Packet):
 # 7.8 LE CONTROLLER COMMANDS, the OGF code is defined as 0x08
 
 class HCI_Cmd_LE_Read_Buffer_Size_V1(Packet):
+    """
+    7.8.2 LE Read Buffer Size command
+    """
     name = "HCI_LE_Read_Buffer_Size [v1]"
 
 
