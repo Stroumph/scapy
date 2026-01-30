@@ -5,8 +5,6 @@
 # Copyright (C) Mike Ryan <mikeryan@lacklustre.net>
 # Copyright (C) Michael Farrell <micolous+git@gmail.com>
 # Copyright (C) Haram Park <freehr94@korea.ac.kr>
-# Copyright (C) Guillaume Bouffard <guillaume.bouffard@ssi.gouv.fr>
-# Copyright (C) Philippe Trébuchet <philippe.trebuchet@ssi.gouv.fr>
 
 """
 Bluetooth layers, sockets and send/receive functions.
